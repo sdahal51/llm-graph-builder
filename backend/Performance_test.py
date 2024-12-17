@@ -44,7 +44,7 @@ def post_request_chunk():
     'password' : '',  
     'chunk_ids' : "14b337cdcab8f4c8006f7cd5a699ffe69f377e6c"
     }
-    response = requests.post(API_BASE_URL + ENDPOINTS['post_chunk'], headers=data)
+    response = requests.post(API_BASE_URL + ENDPOINTS['post_chunk'], headers=data, timeout=60)
     return response.status_code, response.text
 
 #chat_bot
